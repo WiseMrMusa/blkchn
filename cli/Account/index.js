@@ -22,3 +22,7 @@ export async function createAccount(account) {
 export function getAccount(privateKey) {
     return StellarSdk.Keypair.fromSecret(privateKey);
 }
+
+export function getRandomAccount() {
+    return StellarSdk.Keypair.random();
+}
