@@ -4,13 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cli": "cd cli && node Act",
-    "dev": "cd blckchn && npm run dev",
-    "build": "cd blckchn && npm run build",
-    "start": "cd blckchn && npm run start",
+    "act": "node Act/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WiseMrMusa/blkchn.git"
@@ -21,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/WiseMrMusa/blkchn/issues"
   },
-  "homepage": "https://github.com/WiseMrMusa/blkchn#readme"
+  "homepage": "https://github.com/WiseMrMusa/blkchn#readme",
+  "type": "module",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "elliptic": "^6.5.4",
+    "node-fetch": "^3.3.2",
+    "ramda": "^0.29.0",
+    "stellar-sdk": "^10.4.1"
+  }
 }
