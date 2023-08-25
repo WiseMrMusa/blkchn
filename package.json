@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cli": "cd cli && node Act",
+    "cli": "cd cli && node Demo",
     "dev": "cd blckchn && npm run dev",
     "build": "cd blckchn && npm run build",
     "start": "cd blckchn && npm run start",

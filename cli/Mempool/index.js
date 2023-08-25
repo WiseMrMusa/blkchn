@@ -1,7 +1,13 @@
 // The mempool is the dataStructure that stores un-executed transaction
 
-class Mempool {
-    constructor(){
+export class Mempool {
+    constructor(opts){
+    const {
+        blockchain,
+    } = {
+        ...opts
+    }
+    this.blockchain = blockchain 
     }
 
     transactions = []

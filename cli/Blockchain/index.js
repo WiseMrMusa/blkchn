@@ -1,12 +1,12 @@
 import { maxBy, reduce, unfold, reverse, values, prop } from "ramda";
 import { Block } from '../Block/index.js'
+import { Mempool } from '../Mempool/index.js'
 
 export class Blockchain {
-    constructor() {
-        this.name = "WiseChain",
+    constructor(name) {
+        this.name = name,
         this.genesis = null
         this.blocks = {}
-        this.pendingTransactions = {}
         console.log(`Welcome to ${this.name}`);
         console.log(`A new Blockchain has been created`);
     }
@@ -20,6 +20,13 @@ export class Blockchain {
         });
         this.blocks[block.hash] = block;
         this.genesis = block;
+    }
+
+    createMempool(){
+        const mempool = new Mempool({
+            blockchain : this.name
+        });
+        this.mempool = mempool;
     }
 
     addBlock(newBlock) {
@@ -36,7 +43,6 @@ export class Blockchain {
         const maxHeightBlock = reduce(maxByHeight, blocks[0], blocks);
         return maxHeightBlock;
     }
-
 
     _addBlock(block) {
         if (!block.isValid()) return;
