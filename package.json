@@ -23,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/WiseMrMusa/blkchn/issues"
   },
-  "homepage": "https://github.com/WiseMrMusa/blkchn#readme",
-  "dependencies": {
-    "dotenv": "^16.3.1"
-  }
+  "homepage": "https://github.com/WiseMrMusa/blkchn#readme"
 }
