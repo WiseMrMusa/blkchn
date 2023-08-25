@@ -37,3 +37,13 @@ A front-end will be integrated to the project to interact with the blckchn and i
 ```
     npm run dev
 ```
+
+
+# Todo
+- [] Add the execution layer
+- [] Create a stellar Asset and add to the genesis block
+- [] Create the stellar.toml file
+- [] Make the Error Handling while creating block more verbose
+- [] 
+- [] 
+- [] 

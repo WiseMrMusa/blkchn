@@ -88,16 +88,15 @@ export class Block{
 
 
     mine() {
-        console.log("Start")
-        console.log(this.isValid())
+        console.log("Proof of work started")
+        // console.log(this.isValid())
         while(!this.isValid()){
             this.setNonce(
                 sha256(new Date().getTime().toString()).toString()
             );
-            console.log(sha256(new Date().getTime().toString()).toString())
+            // console.log(sha256(new Date().getTime().toString()).toString())
         }
-        console.log(this.hash)
-        console.log("Omo")
+        console.log(`${this.hash} is the block hash`)
     }
 }
 
