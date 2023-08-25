@@ -1,0 +1,24 @@
+# stellar.toml for WiseMrMusa
+
+[[CURRENCIES]]
+code = "WiseMrMusa"
+issuer = "GCO5MJSHMGRQRFUOARXXTT5AAN7WLRZZKXIXUIM3GYHWXKCGJ52YBGZV"
+
+[TOML]
+version = "1.0"
+
+# Additional information
+[DOCUMENTATION]
+ORG_NAME = "WiseMrMusa"
+ORG_URL = "https://www.wisemrmusa.com"
+
+[[PRINCIPALS]]
+name = "Musa AbdulKareem"
+email = "wisemrmusa@gmail.com"
+keybase = "wisemrmusa"
+
+[[VALIDATORS]]
+ALIAS = "sdf_watcher"
+DISPLAY_NAME = "SDF Watcher"
+HOST = "watcher.stellar.org"
+PUBLIC_KEY = "GD77L63HGHC22ARZ5K2RJG4SD6KUFRQGM5ENZZ7YEGFH44UZNE5JLY3E"

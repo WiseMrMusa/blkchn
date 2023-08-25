@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cli": "cd cli && node Demo",
+    "asset": "cd cli && node Asset",
+    "generate": "cd cli && cd Demo && node generateKeyPair",
     "dev": "cd blckchn && npm run dev",
     "build": "cd blckchn && npm run build",
     "start": "cd blckchn && npm run start",
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/WiseMrMusa/blkchn/issues"
   },
-  "homepage": "https://github.com/WiseMrMusa/blkchn#readme"
+  "homepage": "https://github.com/WiseMrMusa/blkchn#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }

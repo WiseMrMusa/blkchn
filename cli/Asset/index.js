@@ -3,19 +3,32 @@
 import StellarSdk  from 'stellar-sdk';
 var server = new StellarSdk.Server("https://horizon-testnet.stellar.org");
 
-const issuingPair = StellarSdk.Keypair.random();
-const receivingPair = StellarSdk.Keypair.random();
+import dotenv from 'dotenv'
+import { createAccount } from '../Account/index.js';
+dotenv.config()
+
+let SECRET_KEY = process.env.ASSET_SECRET;
+let DISTRIBUTE = process.env.DISTRIBUTOR;
+
+console.log(SECRET_KEY)
+console.log(DISTRIBUTE)
+
+const issuingPair = StellarSdk.Keypair.fromSecret(SECRET_KEY);
+const distributingPair = StellarSdk.Keypair.fromSecret(DISTRIBUTE);
+
+await createAccount(issuingPair)
+await createAccount(distributingPair)
 
 // Keys for accounts to issue and receive the new asset
 var issuingKeys = StellarSdk.Keypair.fromSecret(
     issuingPair.secret(),
 );
 var receivingKeys = StellarSdk.Keypair.fromSecret(
-    receivingPair.secret(),
+    distributingPair.secret(),
 );
 
 // Create an object to represent the new asset
-var astroDollar = new StellarSdk.Asset("AstroDollar", issuingKeys.publicKey());
+var WiseMrMusa = new StellarSdk.Asset("WiseMrMusa", issuingKeys.publicKey());
 
 // First, the receiving account must trust the asset
 server
@@ -29,7 +42,7 @@ server
             // The `limit` parameter below is optional
             .addOperation(
                 StellarSdk.Operation.changeTrust({
-                    asset: astroDollar,
+                    asset: WiseMrMusa,
                     limit: "1000",
                 }),
             )
@@ -53,7 +66,7 @@ server
             .addOperation(
                 StellarSdk.Operation.payment({
                     destination: receivingKeys.publicKey(),
-                    asset: astroDollar,
+                    asset: WiseMrMusa,
                     amount: "10",
                 }),
             )
