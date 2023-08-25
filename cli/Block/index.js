@@ -72,7 +72,7 @@ export class Block{
 
     isValidTransaction(transaction) {
         return (
-            transaction.hasValidSignature()
+            transaction.hasValidSignature
         );
     }
 
