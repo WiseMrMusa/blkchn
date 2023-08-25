@@ -19,10 +19,21 @@ The execution layer is the stellar blockchain.
 
 # A demo
 
+To set-up the project locally, you can clone this repo locally then install the dependencies using any of your package manager
+
+```
+    git clone https://github.com/WiseMrMusa/blkchn.git
+    npm install 
+```
+
 A simulation of these can be seen by running this on the CLI
 
 ```
     npm run cli
 ```
 
-A front-end will be integrated to the project to interact with the blckchn 
+A front-end will be integrated to the project to interact with the blckchn and it can be run locally via 
+
+```
+    npm run dev
+```
