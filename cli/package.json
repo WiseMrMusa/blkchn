@@ -20,7 +20,7 @@
   "homepage": "https://github.com/WiseMrMusa/blkchn#readme",
   "type": "module",
   "dependencies": {
-    "crypto-js": "^4.1.1",
+    "crypto-js": "^4.2.0",
     "elliptic": "^6.5.4",
     "node-fetch": "^3.3.2",
     "ramda": "^0.29.0",
